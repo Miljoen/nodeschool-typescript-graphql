@@ -22,6 +22,8 @@ git clone git@github.com:Miljoen/nodeschool-typescript-graphql.git
 cd nodeschool-typescript-graphql
 npm i
 cp .env.example .env
+npx prisma migrate dev
+npx prisma generate
 npm run start
 ```
 
