@@ -1,3 +1,4 @@
+[![Software License][ico-license]](LICENSE.md)
 # Nodeschool TypeScript GraphQL
 
 NodeSchool material meant for presenting Apollo GraphQL.
