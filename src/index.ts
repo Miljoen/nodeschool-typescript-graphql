@@ -3,10 +3,11 @@ import express from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import dotenv from 'dotenv'
-import { typeDefs } from './schema'
 import { SubscriptionServer } from 'subscriptions-transport-ws'
 import { execute, subscribe } from 'graphql'
 import { resolvers } from './resolvers'
+import { readFileSync } from 'fs'
+import path from 'path'
 
 dotenv.config()
 main()
@@ -14,6 +15,8 @@ main()
 async function main() {
     const app = express()
     const httpServer = createServer(app)
+
+    const typeDefs = readFileSync(path.resolve(__dirname, './graphql/schema.graphql')).toString('utf-8')
 
     const schema = makeExecutableSchema({ typeDefs, resolvers })
     const server = new ApolloServer({ schema })
