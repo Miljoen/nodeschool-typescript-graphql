@@ -13,7 +13,8 @@ Free use, so go ahead and follow the Installation steps to get started!
 ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
 ### Requirements
-- Node v16
+- Node v16 ([Nvm](https://github.com/nvm-sh/nvm))
+- Local PostgreSQL database ([Brew](https://formulae.brew.sh/formula/postgresql))
 
 ### Installation (copy paste in terminal should do the trick!)
 ```
